@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="188.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReminderController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="235.0" prefWidth="337.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Button fx:id="openDetailsButton" layoutX="118.0" layoutY="151.0" mnemonicParsing="false" onAction="#openDetails" text="Open Details" />
+            <Label fx:id="usernameLabel" layoutX="14.0" layoutY="14.0" text="Appointment Reminder">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="title" layoutX="14.0" layoutY="40.0" text="Title" />
+            <Label fx:id="description" alignment="TOP_LEFT" layoutX="14.0" layoutY="63.0" prefHeight="54.0" prefWidth="249.0" text="Description" />
+            <Label fx:id="time" layoutX="228.0" layoutY="126.0" text="Time" textAlignment="RIGHT" />
+            <Button fx:id="dismissButton" layoutX="213.0" layoutY="151.0" mnemonicParsing="false" onAction="#dismiss" text="Dismiss" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
