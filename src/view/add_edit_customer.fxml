@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="453.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Add_edit_customerController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="458.0" prefWidth="657.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Label focusTraversable="false" layoutX="26.0" layoutY="14.0" text="Customer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label focusTraversable="false" layoutX="26.0" layoutY="54.0" text="Id" />
+            <TextField fx:id="customerIdTextBox" disable="true" focusTraversable="false" layoutX="73.0" layoutY="50.0" prefHeight="25.0" prefWidth="52.0" promptText="new" />
+            <Label focusTraversable="false" layoutX="26.0" layoutY="89.0" text="Name" />
+            <TextField fx:id="customerNameTextBox" layoutX="73.0" layoutY="85.0" prefHeight="25.0" prefWidth="193.0" promptText="Customer Name" />
+            <Label focusTraversable="false" layoutX="26.0" layoutY="120.0" text="Active" />
+            <CheckBox fx:id="customerActiveChkBox" layoutX="72.0" layoutY="120.0" mnemonicParsing="false" selected="true" />
+            <TextField fx:id="searchCustomerTextBox" layoutX="19.0" layoutY="149.0" onAction="#searchCustomer" prefHeight="25.0" prefWidth="230.0" promptText="Search Customers (Id or Name)" />
+            <Button fx:id="editCustomerBtn" layoutX="261.0" layoutY="149.0" mnemonicParsing="false" onAction="#editCustomer" text="Edit" />
+            <Button fx:id="saveCustomerBtn" layoutX="534.0" layoutY="426.0" mnemonicParsing="false" onAction="#saveCustomer" text="Save" />
+            <TableView fx:id="customerTable" layoutX="19.0" layoutY="184.0" prefHeight="231.0" prefWidth="281.0">
+               <columns>
+                  <TableColumn fx:id="customerTableId" prefWidth="35.0" text="Id" />
+                  <TableColumn fx:id="customerTableName" prefWidth="141.0" text="Name" />
+                  <TableColumn fx:id="customerTableAddressId" prefWidth="64.0" text="Address Id" />
+                  <TableColumn fx:id="customerTableActive" prefWidth="40.0" text="Active" />
+               </columns>
+            </TableView>
+            <Separator focusTraversable="false" layoutX="309.0" orientation="VERTICAL" prefHeight="461.0" prefWidth="0.0" />
+            <Label focusTraversable="false" layoutX="320.0" layoutY="14.0" text="Select Address">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchAddressTextBox" layoutX="320.0" layoutY="50.0" onAction="#searchAddress" promptText="Search Addresses" />
+            <Button fx:id="newAddressBtn" layoutX="554.0" layoutY="50.0" mnemonicParsing="false" onAction="#addAddress" text="New" />
+            <Button fx:id="editAddressBtn" layoutX="600.0" layoutY="50.0" mnemonicParsing="false" onAction="#editAddress" text="Edit" />
+            <TableView fx:id="addressTable" layoutX="320.0" layoutY="85.0" prefHeight="331.0" prefWidth="317.0">
+              <columns>
+                <TableColumn fx:id="addressTableId" prefWidth="39.0" text="Id" />
+                  <TableColumn fx:id="addressTableLine1" maxWidth="167.0" minWidth="-1.0" prefWidth="167.0" text="Line 1" />
+                  <TableColumn fx:id="addressTableCity" prefWidth="110.0" text="City" />
+              </columns>
+            </TableView>
+            <Button fx:id="addCustomerDoneBtn" layoutX="585.0" layoutY="426.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="52.0" text="Done" />
+            <Label fx:id="customerWarning" focusTraversable="false" layoutX="7.0" layoutY="413.0" prefHeight="46.0" prefWidth="179.0" textFill="#fc0000" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+            <Button fx:id="deleteCustomerBtn" layoutX="249.0" layoutY="426.0" mnemonicParsing="false" onAction="#deleteCustomer" text="Delete" />
+            <Button fx:id="confirmDeleteCustomerBtn" layoutX="186.0" layoutY="426.0" mnemonicParsing="false" onAction="#confirmDeleteCustomer" prefHeight="25.0" prefWidth="59.0" text="Confirm" visible="false" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
